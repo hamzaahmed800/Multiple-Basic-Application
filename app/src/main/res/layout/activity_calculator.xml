@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.hami.muli_app.CalculatorActivity"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Calculator"
+        android:id="@+id/calc"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/abc_background_cache_hint_selector_material_light" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Value1 : "
+        android:id="@+id/val1"
+        android:layout_below="@+id/calc"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="66dp"
+        android:autoText="false"
+        android:textColor="@color/abc_background_cache_hint_selector_material_light" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Value2 : "
+        android:id="@+id/val2"
+        android:layout_below="@+id/val1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/abc_background_cache_hint_selector_material_light" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="RESULT"
+        android:id="@+id/result"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/abc_background_cache_hint_selector_material_light" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/value1"
+        android:layout_alignTop="@+id/val1"
+        android:layout_alignStart="@+id/calc" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/value2"
+        android:layout_alignTop="@+id/val2"
+        android:layout_alignStart="@+id/value1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/value3"
+        android:layout_below="@+id/result"
+        android:layout_toEndOf="@+id/val2" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/add"
+        android:layout_marginTop="52dp"
+        android:layout_below="@+id/value3"
+        android:layout_toStartOf="@+id/sub"
+        android:onClick="add"
+        android:textColor="#fafafa" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/sub"
+        android:layout_alignTop="@+id/add"
+        android:layout_toStartOf="@+id/mul"
+        android:onClick="sub"
+        android:textColor="#fafafa" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:id="@+id/mul"
+        android:layout_alignTop="@+id/sub"
+        android:layout_toStartOf="@+id/div"
+        android:onClick="multiply"
+        android:textColor="#fafafa" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:id="@+id/div"
+        android:layout_alignTop="@+id/mul"
+        android:layout_alignEnd="@+id/value3"
+        android:onClick="divide"
+        android:textColor="#fafafa" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/clear"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="clear"
+        android:textColor="#fafafa" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/back"
+        android:layout_alignTop="@+id/clear"
+        android:layout_toStartOf="@+id/clear"
+        android:onClick="back"
+        android:textColor="#fafafa" />
+</RelativeLayout>
